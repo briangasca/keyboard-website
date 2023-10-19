@@ -1,0 +1,339 @@
+/* */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    text-align: center;
+}
+
+.wrapper{
+    width:90%;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #292929;
+    position: fixed;
+    
+}
+
+.logo{
+    width: 30%;
+    float: left;
+    text-align: left;
+    line-height: 100px;
+    transition: 0.3s ease;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 1px;
+
+
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.7px;
+}
+
+nav{
+    float: right;
+    line-height: 100px;
+}
+
+.nav{
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 90px 10px; /* Large padding which will shrink on scroll (using JS) */
+    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+    position: fixed; /* Sticky/fixed navbar */
+    width: 100%;
+    top: 0; /* At the top */
+    z-index: 99;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding: 36px 10px;
+    margin: 0 1px;
+    transition: 0.5s;
+}
+
+nav a:hover{
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+    width: 100px;
+    height: 100px;
+    padding: 36px 10px;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 50%;
+}
+
+.banner-area{
+    background-image: url(images/M5yKz0Yv5ykp8ehJSNH97l6FtGZOlcuqVmjiRrP0m2s.png);
+    background-size: cover;
+    background-position: center center;
+    top: 100px;
+    height: 50vh;
+    position: fixed;
+    width: 100%;
+}
+
+.banner-area:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #2c0c2c;
+    opacity: .6;
+    z-index: -1;
+}
+
+.banner-area h2{
+    padding-top: 8%;
+    padding-right: 50%;
+    font-size: 40px;
+    background: hsla(343, 76%, 80%, 1);
+
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.banner-area h1{
+    padding-right: 48%;
+    font-size: 20px;
+    color:  #fff;
+}
+
+.content-area{
+    width: 100%;
+    height: 2000px;
+    position: relative;
+    background-color: #292929;
+    top: 550px;
+}
+
+.wrapper{
+    color:rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 580px) {
+    .nav {
+      padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+    }
+    .nav a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+
+/* da products */
+
+section{
+    color: #fff;
+}
+
+
+section .products {
+    left: 300px;
+    margin: 150px;
+    flex-direction: column;
+    background-color:#AC979C;
+    position: relative;
+    border-radius: 6px;
+    height: 1800px;
+    width: 900px;
+    
+}
+
+section .product-1 {
+    top: 1rem;
+    margin: 2rem;
+    height: 550px;
+    width: 850px;
+    border-radius: 4px;
+    background-image: url('/images/7C6R2vz.png');
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+}
+
+section .product-2 {
+    margin: 2rem;
+    top: 1rem;
+    height: 550px;
+    width: 850px;
+    border-radius: 4px;
+    background-image: url('/images/japanese_pbt_keycaps_xda_1600859944_fe716a85_progressive.jpg');
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+}
+
+section .product-3 {
+    margin: 2rem;
+    top: 1rem;
+    height: 550px;
+    width: 850px;
+    border-radius: 4px;
+    background-image: url('/images/H6uOkG4.png');
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+}
+    
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}   
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.product-1 h3{
+    background-image: linear-gradient(to top, 
+    #ff8177 0%, 
+    #ff867a 0%, 
+    #ff8c7f 21%, 
+    #f99185 52%, 
+    #cf556c 78%, 
+    #b12a5b 100%
+    );
+
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.product-2 h3 {
+    color: black;
+}
+
+.product-3 h3{
+    background-image: linear-gradient(to bottom, #b721ff 0%, #21d4fd 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+/* Buttons */
+
+.product-1 button {
+    color: #fff;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background: #f77062;
+    position: absolute;
+    top: 440px;
+    right: 30px;
+    font-size: 1rem;
+    transition: all 0.35s;
+}
+
+.product-2 button {
+    color: #fff;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background: #f77062;
+    position: absolute;
+    top: 440px;
+    left: 30px;
+    font-size: 1rem;
+    transition: all 0.35s;
+}
+
+.product-3 button {
+    color: #fff;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background: #f77062;
+    position: absolute;
+    top: 440px;
+    right: 30px;
+    font-size: 1rem;
+    transition: all 0.35s;
+}
+
+.product-1 button:hover {
+    background: #4837ff;
+    transition: all 0.35s;
+    cursor: pointer;
+}
+
+.product-2 button:hover {
+    background: #4837ff;
+    transition: all 0.35s;
+    cursor: pointer;
+}
+
+.product-3 button:hover {
+    background: #4837ff;
+    transition: all 0.35s;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 960px){
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+
+
+    .nav a {
+        display: grid;
+        grid-template-columns: auto;
+        
+    }
+
+    section .products {
+        left: 150px;
+        margin: 75px;
+        height: 900px;
+        width: 450px;
+        
+    }
+    
+
+}
